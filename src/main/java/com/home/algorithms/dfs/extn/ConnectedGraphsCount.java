@@ -2,7 +2,6 @@ package com.home.algorithms.dfs.extn;
 
 public class ConnectedGraphsCount {
 
-	private int matrix[][];
 	private int M;
 	private int N;
 	private boolean[][] visited;
@@ -10,7 +9,6 @@ public class ConnectedGraphsCount {
 	private int[] yaxis = new int[] {-1,0,1,-1,1,-1,0,1};
 	
 	public ConnectedGraphsCount(int matrix[][]){
-		this.matrix = matrix;
 		this.M = matrix.length;
 		this.N = matrix[0].length;
 		visited = new boolean[M][N];

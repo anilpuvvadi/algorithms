@@ -1,4 +1,4 @@
-package com.home.algorithms.general;
+package com.home.algorithms.search;
 
 public class KMP {
 

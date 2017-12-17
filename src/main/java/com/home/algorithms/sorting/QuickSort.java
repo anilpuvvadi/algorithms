@@ -1,4 +1,4 @@
-package com.home.algorithms.general;
+package com.home.algorithms.sorting;
 
 public class QuickSort {
 	

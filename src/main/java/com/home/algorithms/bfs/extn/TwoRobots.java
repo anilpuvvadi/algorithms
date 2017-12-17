@@ -1,7 +1,9 @@
-package com.home.algorithms.general;
+package com.home.algorithms.bfs.extn;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
+
+import com.home.algorithms.general.MaxProdPair;
 
 public class TwoRobots {
 
@@ -91,7 +93,7 @@ public class TwoRobots {
 	
 public static void main(String args[]) {
 		
-	  MultiProblems.maxprodpair(new int[]{-1, -3, -4, 2, 0, -5} );
+	  MaxProdPair.maxprodpair(new int[]{-1, -3, -4, 2, 0, -5} );
 		int[][] matrix =  {
 		        { 1, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
 		        { 1, 1, 1, 0, 1, 1, 1, 0, 1, 1 },
