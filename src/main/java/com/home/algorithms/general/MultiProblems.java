@@ -1,4 +1,4 @@
-package com.home.algorithms;
+package com.home.algorithms.general;
 
 import java.util.Set;
 

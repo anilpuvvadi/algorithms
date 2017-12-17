@@ -1,4 +1,4 @@
-package com.home.algorithms;
+package com.home.algorithms.general;
 
 public class NQueen {
 	
