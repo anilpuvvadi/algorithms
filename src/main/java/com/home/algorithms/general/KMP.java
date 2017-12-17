@@ -74,7 +74,7 @@ public class KMP {
 
 	public static void main(String args[]){
 		KMP r = new KMP();
-		System.out.println(r.patternMatch("aabceabfeaeabcd".toCharArray(), "abcde".toCharArray()));
+		System.out.println(r.patternMatch("aabceabfeaeabcd".toCharArray(), "aabceabfeaeabcd".toCharArray()));
 	}
 
 }
