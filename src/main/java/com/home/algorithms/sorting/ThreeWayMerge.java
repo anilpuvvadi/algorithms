@@ -26,6 +26,9 @@ public class ThreeWayMerge {
 		return T;
 	}
 	
+	//Time Complexity O(m+n+o) - size of 3 arrays
+	//Space Complexity O(m+n) - at a time 2 arrays are required
+	
 	public static void main(String args[]){
 			ThreeWayMerge th = new ThreeWayMerge();
 			int[] A = new int[]{ 1, 2, 3, 5 };

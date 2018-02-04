@@ -35,6 +35,9 @@ public class LLN {
 		}
 		return root;
 	}
+	
+	//Time Complexity - O(n)
+	//Space Complexity - O(1)
 
 	int findMinNode(LLNode root) {
 		int min = Integer.MAX_VALUE;
@@ -50,6 +53,8 @@ public class LLN {
 		}
 		return min;
 	}
+	//Time Complexity - O(n)
+	//Space Complexity - O(1)
 
 	public static void main(String arg[]) {
 		LLN lln = new LLN();

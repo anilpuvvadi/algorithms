@@ -26,6 +26,9 @@ public class BST {
 			return false;
 		return true;
 	}
+	
+	//Time Complexity - O(n)
+	//Space Complexity - O(1)
 
 	public static void main(String args[]) {
 		BST bst = new BST();

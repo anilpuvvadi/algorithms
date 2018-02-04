@@ -16,6 +16,9 @@ public class MissingNumber {
 		return X1^X2;
 	}
 	
+	//Time Complexity - O(n)
+	//Space Complexity - O(1)
+	
 	public static void main(String args[]){
 		MissingNumber m = new MissingNumber();
 		System.out.println(" "+m.missingnumber(new int[]{1,2,3,4,5,7,8,9,10,11}));

@@ -39,6 +39,8 @@ public class NextHighest1 {
 		return succ;
 	}
 
+	//Time Complexity - O(n)
+	//Space Complexity - O(1)
 	public static void main(String args[]){
 		
 		NextHighest1 lt = new NextHighest1();
