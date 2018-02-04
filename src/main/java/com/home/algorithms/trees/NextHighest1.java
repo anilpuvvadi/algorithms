@@ -2,6 +2,16 @@ package com.home.algorithms.trees;
 
 public class NextHighest1 {
 
+	class TreeNode{
+		private TreeNode left;
+		private TreeNode right;
+		private int value;
+		public TreeNode(int data){
+			this.left = null;
+			this.right = null;
+			this.value = data;
+		}
+	}
 		public TreeNode getMinNode(TreeNode root){
 			TreeNode cur = root;
 			while(cur!=null){
@@ -31,13 +41,13 @@ public class NextHighest1 {
 	public static void main(String args[]){
 		
 		NextHighest1 lt = new NextHighest1();
-		TreeNode root = new TreeNode(50);
-	    root.left = new TreeNode(40);
-	    root.left.left = new TreeNode(30);
-	    root.left.right = new TreeNode(45);
-	    root.right = new TreeNode(60);
-	    root.right.left = new TreeNode(55);
-	    root.right.right = new TreeNode(70);
+		NextHighest1.TreeNode root = lt.new TreeNode(50);
+	    root.left = lt.new TreeNode(40);
+	    root.left.left = lt.new TreeNode(30);
+	    root.left.right = lt.new TreeNode(45);
+	    root.right = lt.new TreeNode(60);
+	    root.right.left = lt.new TreeNode(55);
+	    root.right.right = lt.new TreeNode(70);
 	    TreeNode temp = lt.findNextLargest(root,root.right.left);
 	    	System.out.println("value=>"+temp.value);
 	    }
