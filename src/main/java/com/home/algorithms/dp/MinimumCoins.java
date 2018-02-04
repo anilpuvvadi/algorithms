@@ -1,4 +1,4 @@
-package com.home.algorithms.dynamicprogramming;
+package com.home.algorithms.dp;
 
 public class MinimumCoins {
 	

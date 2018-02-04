@@ -11,7 +11,10 @@ public class TwoRobots {
 	int c;
 	int[] rowqueue = { -1, 0, 0, 1 };
 	int[] columnqueue = { 0, -1, 1, 0 };
-	
+//	int[] rowqueue = { 0, 1};
+//	int[] columnqueue = { 1, 0};
+	//private int[] rowqueue = new int[] {-1,-1,-1,0,0,1,1,1};
+	//private int[] columnqueue = new int[] {-1,0,1,-1,1,-1,0,1};
 	public TwoRobots(int ROW, int COL) {
 		this.r = ROW;
 		this.c = COL;
@@ -79,6 +82,7 @@ public class TwoRobots {
 				if (isValid(v.x, v.y) && !visited[v.x][v.y]  && matrix[v.x][v.y] == 1) {
 					Queuenode newnode = new Queuenode(node.distance + 1, v);
 					visited[v.x][v.y] = true;
+					System.out.println("v.x =>" +v.x + "v.y => "+v.y + "distance => "+newnode.distance);
 					q.add(newnode);
 				}
 			}
@@ -87,17 +91,15 @@ public class TwoRobots {
 	}
 
 	public int invokeBFS(int[][] matrix) {
-		return BFS(new Vertex(0,0), new Vertex(r-1,c-1), matrix);
+		return BFS(new Vertex(0,0), new Vertex(3,4), matrix);
 		
 	}
 	
 public static void main(String args[]) {
-		
-	  MaxProdPair.maxprodpair(new int[]{-1, -3, -4, 2, 0, -5} );
 		int[][] matrix =  {
-		        { 1, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
-		        { 1, 1, 1, 0, 1, 1, 1, 0, 1, 1 },
-		        { 1, 1, 1, 1, 1, 1, 0, 1, 0, 1 },
+		        { 0, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
+		        { 1, 1, 1, 1, 1, 1, 1, 0, 1, 1 },
+		        { 1, 1, 1, 0, 0, 1, 0, 1, 0, 1 },
 		        { 1, 0, 0, 1, 1, 0, 0, 0, 0, 1 },
 		        { 1, 1, 1, 0, 1, 1, 1, 0, 1, 0 },
 		        { 1, 0, 1, 1, 1, 1, 1, 1, 0, 0 },

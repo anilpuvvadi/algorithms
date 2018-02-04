@@ -5,10 +5,8 @@ import java.util.Stack;
 public class DFS {
 	
 	private Stack<Vertex> stack;
-	
 	public DFS(){
 		stack = new Stack<Vertex>();
-		
 	}
 	
 	public void depthFirstSearch(Vertex root){
@@ -16,10 +14,9 @@ public class DFS {
 			return;
 		}
 		stack.push(root);
-		while(!stack.isEmpty()){
-			Vertex v= stack.peek();
+		while(!stack.isEmpty()){			
+			Vertex v = stack.pop();
 			System.out.println("vertex =>"+v.getName());
-			v = stack.pop();
 			for(Vertex ver: v.getAdjacentVertices()){
 				if(!ver.isVisited()){
 					stack.push(ver);

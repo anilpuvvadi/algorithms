@@ -29,8 +29,8 @@ public class NQueen {
 			boolean issafeplace = true;
 			for(int queen=0;queen<row;queen++){
 				if(row+col == pos[queen].row + pos[queen].col || row-col ==  pos[queen].row - pos[queen].col || pos[queen].col ==col ){
-				issafeplace=false;
-				//break;
+					issafeplace=false;
+					break;
 				}
 			}
 			if(issafeplace){
@@ -46,7 +46,7 @@ public class NQueen {
 
 	public static void main(String args[]){
 		NQueen nq = new NQueen();
-		Position[] pos =nq.invokeNQueen(6);
+		Position[] pos =nq.invokeNQueen(4);
 		for(int i =0;i<pos.length;i++){
 			System.out.println("row"+pos[i].row + ", col" + pos[i].col);
 		}

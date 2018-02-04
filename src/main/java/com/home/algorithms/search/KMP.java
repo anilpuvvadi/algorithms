@@ -2,7 +2,8 @@ package com.home.algorithms.search;
 
 public class KMP {
 
-	public boolean patternMatch(char text[], char pattern[]) {
+	//slow
+	public boolean substring(char text[], char pattern[]) {
 
 		int k = 0, j = 0, i=0;
 		while(i<text.length && j<pattern.length) {
@@ -21,12 +22,12 @@ public class KMP {
 		return false;
 	}
 	
-	public boolean substring(char[] text, char[] pattern){		
+	public boolean kmp(char[] text, char[] pattern){		
 		int[] kmp = formpatternarray(pattern);
 		int i =0;
 		int j =0;
 	    while(i<text.length && j<pattern.length){
-	    	if(pattern[i]==text[i]){
+	    	if(pattern[j]==text[i]){
 	    		i++;
 	    		j++;
 	    	} else {
@@ -47,25 +48,21 @@ public class KMP {
 	private int[] formpatternarray(char[] pattern) {
 		int[] indarr = new int[pattern.length];
 		int j=0;
-		int i =1;
-		indarr[0] = 0;
-		while (i<pattern.length){
-			
-			if(pattern[i]!=pattern[j]){
-			
-					if(j!=0){
-						j = pattern[j-1];
-					} else{
-					pattern[i]=0;
-					i++;	
-					}
-					
-					
-				}
-			else {
+		for(int i=1; i < pattern.length;){
+			System.out.println("i=> "+i);
+			System.out.println("j=> "+j);
+			if(pattern[i]==pattern[j]){
 				indarr[i] =j+1;
 				j++;
-				i++;
+				i++;	
+				}
+			else {
+				if(j!=0){
+					j = indarr[j-1];
+				} else{
+				indarr[i]=0;
+				i++;	
+				}
 			}
 			
 		}
@@ -74,7 +71,7 @@ public class KMP {
 
 	public static void main(String args[]){
 		KMP r = new KMP();
-		System.out.println(r.patternMatch("aabceabfeaeabcd".toCharArray(), "aabceabfeaeabcd".toCharArray()));
+		System.out.println(r.kmp("aabceabfeaeabcd".toCharArray(), "dadadd".toCharArray()));
 	}
 
 }

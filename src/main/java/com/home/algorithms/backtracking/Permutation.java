@@ -9,7 +9,7 @@ public class Permutation {
 			Set<String> alreadychosenlist) {
 		if (s.toString().isEmpty() && !alreadychosenlist.contains(chosen.toString())) {
 			System.out.println(chosen);
-			alreadychosenlist.add(s.toString());
+			alreadychosenlist.add(chosen.toString());
 			return;
 		}
 		for (int i = 0; i < s.length(); i++) {
@@ -23,7 +23,7 @@ public class Permutation {
 	}
 
 	public static void main(String args[]){
-		Permutation.permutation(new StringBuffer("ABC"), new StringBuffer(""),
+		Permutation.permutation(new StringBuffer("((()))"), new StringBuffer(""),
 					new HashSet<String>());
 	}
 }
