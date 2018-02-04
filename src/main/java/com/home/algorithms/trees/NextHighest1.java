@@ -14,9 +14,10 @@ public class NextHighest1 {
 	}
 		public TreeNode getMinNode(TreeNode root){
 			TreeNode cur = root;
-			while(cur!=null){
+			while(cur.left!=null){
 				cur = cur.left;
 			}
+			System.out.println("cur"+cur);
 			return cur;
 		}
 		
@@ -48,7 +49,7 @@ public class NextHighest1 {
 	    root.right = lt.new TreeNode(60);
 	    root.right.left = lt.new TreeNode(55);
 	    root.right.right = lt.new TreeNode(70);
-	    TreeNode temp = lt.findNextLargest(root,root.right.left);
+	    TreeNode temp = lt.findNextLargest(root,root.right);
 	    	System.out.println("value=>"+temp.value);
 	    }
 
